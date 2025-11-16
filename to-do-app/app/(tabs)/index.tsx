@@ -41,12 +41,19 @@ export default function Index() {
     }
   };
 
+
+  //------------------------------------------------------------
+
   const handleDeleteTodo = async (id: Id<"todos">) => {
     Alert.alert("Delete Todo", "Are you sure you want to delete this todo?", [
       { text: "Cancel", style: "cancel" },
       { text: "Delete", style: "destructive", onPress: () => deleteTodo({ id }) },
     ]);
   };
+
+
+  //----------------------------------------------------------------
+
 
   const handleEditTodo = (todo: Todo) => {
     setEditText(todo.text);
